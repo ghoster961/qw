@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaInvest</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <div class="logo">NovaInvest</div>
+        <ul>
+          <li><a href="#plans">Plans</a></li>
+          <li><a href="#calculator">Calculator</a></li>
+          <li><a href="#insights">Insights</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="btn btn-outline">Client Login</button>
+      </nav>
+      <div class="hero-content">
+        <div>
+          <p class="eyebrow">Smart portfolios • Human expertise</p>
+          <h1>Invest with confidence and stay ahead of the curve.</h1>
+          <p>
+            Our advisors combine market expertise and smart automation to grow
+            wealth responsibly, with a focus on transparency and sustainable
+            returns.
+          </p>
+          <div class="hero-cta">
+            <button class="btn">Start Investing</button>
+            <button class="btn btn-outline">Schedule a call</button>
+          </div>
+        </div>
+        <div class="highlight-card">
+          <p>Total assets under advisory</p>
+          <h2>$2.3B</h2>
+          <div class="trend">
+            <span class="trend-value">+12.4%</span>
+            <span>vs last 12 months</span>
+          </div>
+          <hr />
+          <ul>
+            <li>Automated rebalancing</li>
+            <li>Dedicated financial coach</li>
+            <li>ESG focused funds</li>
+          </ul>
+        </div>
+      </div>
+      <div class="floating-assets" aria-hidden="true">
+        <article class="asset-card">
+          <img
+            src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=400&q=80"
+            alt=""
+          />
+          <div>
+            <p>Global Equity</p>
+            <span>+8.9% YTD</span>
+          </div>
+        </article>
+        <article class="asset-card">
+          <img
+            src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=400&q=80"
+            alt=""
+          />
+          <div>
+            <p>Impact Fund</p>
+            <span>+12.1% YTD</span>
+          </div>
+        </article>
+        <article class="asset-card">
+          <img
+            src="https://images.unsplash.com/photo-1476357471311-43c0db9fb2b4?auto=format&fit=crop&w=400&q=80"
+            alt=""
+          />
+          <div>
+            <p>Futures Desk</p>
+            <span>-1.4% today</span>
+          </div>
+        </article>
+      </div>
+    </header>
+
+    <main>
+      <section id="plans" class="section plans">
+        <div class="section-heading">
+          <p class="eyebrow">Plans</p>
+          <h2>Diversified portfolios for every goal.</h2>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <p class="card-eyebrow">Starter</p>
+            <h3>$1k - $25k</h3>
+            <p>
+              Micro-investing and recurring deposits with automated risk
+              management.
+            </p>
+            <ul>
+              <li>No management fees up to $5k</li>
+              <li>Direct indexing exposure</li>
+              <li>Guided learning path</li>
+            </ul>
+            <button class="btn full">Open account</button>
+          </article>
+          <article class="card">
+            <p class="card-eyebrow">Growth</p>
+            <h3>$25k - $250k</h3>
+            <p>Smart tax optimization and quarterly strategy sessions.</p>
+            <ul>
+              <li>Tax-loss harvesting</li>
+              <li>Dynamic asset allocation</li>
+              <li>Advisor office hours</li>
+            </ul>
+            <button class="btn full">Build plan</button>
+          </article>
+          <article class="card">
+            <p class="card-eyebrow">Legacy</p>
+            <h3>$250k+</h3>
+            <p>White-glove estate planning and custom alternative exposure.</p>
+            <ul>
+              <li>Private credit access</li>
+              <li>Family office support</li>
+              <li>Bespoke reporting</li>
+            </ul>
+            <button class="btn full">Talk to us</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="calculator" class="section calculator">
+        <div class="section-heading">
+          <p class="eyebrow">Growth simulator</p>
+          <h2>Project your investment horizon.</h2>
+        </div>
+        <form class="calc-form">
+          <label>
+            Initial investment
+            <input type="number" id="initial" value="5000" min="0" />
+          </label>
+          <label>
+            Monthly contribution
+            <input type="number" id="monthly" value="300" min="0" />
+          </label>
+          <label>
+            Expected annual return (%)
+            <input type="number" id="rate" value="7" min="0" max="25" />
+          </label>
+          <label>
+            Years invested
+            <input type="number" id="years" value="10" min="1" />
+          </label>
+          <button type="button" class="btn" id="calculate-btn">
+            Run projection
+          </button>
+        </form>
+        <div class="calc-output">
+          <p class="eyebrow">Projected balance</p>
+          <h3 id="result">$0</h3>
+          <p id="summary"></p>
+        </div>
+      </section>
+
+      <section id="insights" class="section insights">
+        <div class="section-heading">
+          <p class="eyebrow">Insights</p>
+          <h2>Market signals from our research desk.</h2>
+        </div>
+        <div class="insight-grid">
+          <article>
+            <span>Monthly playbook</span>
+            <h3>2025 macro themes</h3>
+            <p>
+              Cooling inflation and resilient labor markets set the stage for a
+              soft landing scenario.
+            </p>
+            <a href="#">Download PDF →</a>
+          </article>
+          <article>
+            <span>Sector radar</span>
+            <h3>Energy transition</h3>
+            <p>
+              Infrastructure spending accelerates renewables adoption while
+              maintaining grid reliability.
+            </p>
+            <a href="#">Read briefing →</a>
+          </article>
+          <article>
+            <span>Pulse survey</span>
+            <h3>Investor sentiment</h3>
+            <p>
+              Risk appetite edges higher as retail cash levels fall back to
+              pre-pandemic averages.
+            </p>
+            <a href="#">See charts →</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="footer">
+      <div>
+        <h4>Stay in the loop</h4>
+        <p>Receive curated market intel and product updates each month.</p>
+      </div>
+      <form class="newsletter">
+        <input type="email" placeholder="you@example.com" required />
+        <button class="btn">Subscribe</button>
+      </form>
+      <p class="legal">
+        © <span id="year"></span> NovaInvest Advisors. All rights reserved.
+      </p>
+      <div class="social-logins">
+        <p>Continue with</p>
+        <div class="providers">
+          <button class="social-btn google">
+            <span>G</span>
+            Google
+          </button>
+          <button class="social-btn facebook">
+            <span>f</span>
+            Facebook
+          </button>
+          <button class="social-btn github">
+            <span>⌘</span>
+            GitHub
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <button class="assistant-toggle" id="assistant-toggle" aria-label="Open AI assistant">
+      <span>AI</span>
+    </button>
+    <section class="assistant-panel" id="assistant-panel" aria-live="polite">
+      <header class="assistant-header">
+        <div>
+          <p class="title">Nova AI Desk</p>
+          <p class="status">Online • Markets synced</p>
+        </div>
+        <button id="assistant-close" aria-label="Close assistant">×</button>
+      </header>
+      <div class="chat-log" id="chat-log">
+        <p class="bot">
+          Hi! I track live macro signals. Ask about your portfolio, risk, or
+          market views.
+        </p>
+      </div>
+      <form class="assistant-input" id="assistant-form">
+        <input
+          type="text"
+          id="assistant-message"
+          placeholder="Ask about growth outlook..."
+          autocomplete="off"
+          required
+        />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
